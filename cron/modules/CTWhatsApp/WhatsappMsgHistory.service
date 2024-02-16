@@ -1,0 +1,131 @@
+<?php
+/*+***********************************************************************************
+ * The contents of this file are subject to the vtiger CRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  vtiger CRM Open Source
+ * The Initial Developer of the Original Code is vtiger.
+ * Portions created by vtiger are Copyright (C) vtiger.
+ * All Rights Reserved.
+ *************************************************************************************/
+
+require_once 'config.inc.php';
+require_once('include/utils/utils.php');
+require_once('include/database/PearDatabase.php');
+include_once 'includes/main/WebUI.php';
+
+global $current_user, $adb, $root_directory, $site_URL;
+$current_user = Users::getActiveAdminUser();
+$currenUserID = $current_user->id;
+
+$query = $adb->pquery("SELECT * FROM vtiger_ctwhatsapp_contacts_history 
+	INNER JOIN vtiger_ctwhatsapp_allcontacts ON vtiger_ctwhatsapp_allcontacts.scannedwhatsappnumber = vtiger_ctwhatsapp_contacts_history.whatsappnumber WHERE vtiger_ctwhatsapp_contacts_history.status = 1", array());
+$row = $adb->num_rows($query);
+for ($i=0; $i < $row; $i++) { 
+	$startdate = $adb->query_result($query, $i, 'startdate');
+	$enddate = $adb->query_result($query, $i, 'enddate');
+	$syncstatus = $adb->query_result($query, $i, 'syncstatus');
+	$whatsappNumber = $adb->query_result($query, $i, 'whatsappnumber');
+	$customerwhatsappnumber = $adb->query_result($query, $i, 'customerwhatsappnumber');
+	if($syncstatus == 0){
+		$configData = CTWhatsApp_Record_Model::getWhatsAppDetailWithMobileNo($whatsappNumber);
+        $apiUrl = $configData['api_url'];
+        $auth_token = $configData['auth_token'];
+
+		$getHistoryDetail = CTWhatsApp_Record_Model::getWhatsappHistory($customerwhatsappnumber, $whatsappNumber);
+		$cursorRows = $getHistoryDetail['cursorRows'];
+    	$url = $apiUrl.'/historypaging';
+
+		if($cursorRows){
+			$history_id = $getHistoryDetail['history_id'];
+			$history_fromme = $getHistoryDetail['history_fromme'];
+			$newremoteJid = $getHistoryDetail['remotjid'];
+			if($historyFromme == 0){
+				$historyFromme = '';
+			}
+			$postfields = array(
+				"number" => $customerwhatsappnumber,
+			    "count" => 5,
+			    "cursor" => array("before" => array("remoteJid" => $newremoteJid, "id" => $history_id,"fromMe" => $historyFromme))
+ 			);
+		}else{
+	        $postfields = array(
+				"number" => $customerwhatsappnumber,
+			    "count" => 5
+			);
+		}
+
+		$val = CTWhatsApp_WhatsappChat_View::callCURL($url, $postfields, $auth_token);
+	
+		$cursor = $val['cursor']['before']['id'];
+        $history_fromme = $val['cursor']['before']['fromMe'];
+     	$remoteJid = $val['cursor']['before']['remoteJid'];
+
+        if($val){
+        	$Allmsgs = $val['Allmsgs'];
+        	$messageCount = count($Allmsgs);
+        	$lastKey = key(array_slice($Allmsgs, -1, 1, true));
+			$getLastMessageDate = $Allmsgs[$lastKey]['messageTimestamp'];
+			$lastMessageDate = date('Y-m-d', $getLastMessageDate);
+
+			$relatedToData = CTWhatsApp_Record_Model::getRelatedToId($customerwhatsappnumber);
+			
+			$relatedTo = $relatedToData['relatedTo'];
+			$configureUserid = $relatedToData['smownerid'];
+			$displayname = $relatedToData['displayname'];
+			
+			if(strtotime($startdate) >= strtotime($lastMessageDate)) {
+			}else{
+				$adb->pquery("UPDATE vtiger_ctwhatsapp_allcontacts set syncstatus = 1 WHERE scannedwhatsappnumber = ? AND customerwhatsappnumber = ?", array($whatsappNumber, $customerwhatsappnumber));
+			}
+
+			if($messageCount == 0){
+				$adb->pquery("UPDATE vtiger_ctwhatsapp_allcontacts set syncstatus = 1 WHERE scannedwhatsappnumber = ? AND customerwhatsappnumber = ?", array($whatsappNumber, $customerwhatsappnumber));	
+			}
+
+	        foreach ($Allmsgs as $key => $value) {
+	        	$recordModel1 = Vtiger_Record_Model::getCleanInstance('CTWhatsApp');
+	        	$fromMe = $value['key']['fromMe'];
+	        	if($fromMe == 1){
+	        		$type = "Send";
+					$from = explode('@', $value['key']['remoteJid']);
+        			$body = $value['message']['extendedTextMessage']['text'];
+        			if($body == ''){
+        				$body = $value['message']['conversation'];	
+        			}
+	        	}else{
+	        		$type = "Recieved";
+					$from = explode('@', $value['key']['remoteJid']);
+					$body = $value['message']['conversation'];
+	        	}
+	        	$messageid = $value['key']['id'];
+	        	$time = $value['messageTimestamp'];
+	        	if(strtotime($startdate) <= $time){
+		        	$getMessageDateTime = date("Y-m-d H:i:s",$time);
+		        	$checkMessageId = CTWhatsApp_Record_Model::checkMessageId($messageid);
+		        	if($checkMessageId == 0){
+						$recordModel1->set('message_type', $type);
+						$recordModel1->set('message_body', $body);
+						$recordModel1->set('whatsapp_contactid', $relatedTo);
+						if($displayname){
+							$recordModel1->set('whatsapp_displayname', $displayname);
+						}else{
+							$recordModel1->set('whatsapp_displayname', $customerwhatsappnumber);
+						}
+						$recordModel1->set('whatsapp_unreadread', 'Read');
+						$recordModel1->set('whatsapp_withccode', $customerwhatsappnumber);
+						$recordModel1->set('whatsapp_sendername', $customerwhatsappnumber);
+						$recordModel1->set('whatsapp_fromno', $whatsappNumber);
+						$recordModel1->set('whatsapp_datetime', $getMessageDateTime);
+						$recordModel1->set('assigned_user_id', 1);
+						$recordModel1->set('your_number', $whatsappNumber);
+						$recordModel1->set('msgid', $messageid);
+			        	if($body != ''){
+							$recordModel1->save();
+						}
+					}
+				}
+	        }
+			CTWhatsApp_Record_Model::insertWhatsappHistory($customerwhatsappnumber, $cursor, $history_fromme, $remoteJid, $whatsappNumber);
+		}
+	}
+}

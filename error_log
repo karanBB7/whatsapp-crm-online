@@ -1,0 +1,768 @@
+[15-Feb-2024 09:41:14 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'whatsap'@'localhost' (using password: YES) in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:41:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 74
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Undefined variable: dbconfig in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Undefined variable: dbconfig in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Undefined variable: dbconfig in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Undefined variable: dbconfig in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 72
+[15-Feb-2024 09:42:00 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home2/bitechnosys/whatsapp.crm-doctor.com/modules/ModCommentswhatsapp/actions/MassSaveAjax.php on line 74
+[15-Feb-2024 03:56:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/get_number_api.php on line 32
+[15-Feb-2024 03:56:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:22 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:27 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:27 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:33 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:36 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:37 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:47 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:49 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:49 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:49 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:49 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:54 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:56 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:56 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:56:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:56:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:00 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:00 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:01 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:02 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:09 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:09 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:10 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:11 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:13 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:27 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:27 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:33 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:36 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:37 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:43 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:45 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:45 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:47 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:48 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:49 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:49 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:52 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:54 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:56 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:56 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:56 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:57:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:57:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:00 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:00 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:00 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:54 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:55 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:55 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:56 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:56 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:58:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:58:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:00 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:00 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:01 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:02 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:09 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:09 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:11 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:11 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:12 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:13 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:14 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:22 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:23 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:25 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:27 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:27 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11
+[15-Feb-2024 03:59:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 2
+[15-Feb-2024 03:59:33 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php:11
+Stack trace:
+#0 {main}
+  thrown in /home2/bitechnosys/whatsapp.crm-doctor.com/recivedmessage.php on line 11

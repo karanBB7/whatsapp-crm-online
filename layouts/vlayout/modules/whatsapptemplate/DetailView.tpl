@@ -1,0 +1,1 @@
+<script src="layouts/vlayout/modules/whatsapptemplate/CustomInvokeFunction.js"></script>

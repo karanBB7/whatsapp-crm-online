@@ -1,0 +1,6 @@
+paste style.css 
+
+layouts\v7\lib\vt-icons \ style.css
+
+paste ModuleRelatedTabs.tpl
+layouts\v7\modules\Vtiger \ ModuleRelatedTabs.tpl

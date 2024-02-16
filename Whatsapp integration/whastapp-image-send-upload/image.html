@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <input type="file" id="fileInput" accept="image/*" required>
+  <button id="uploadButton">Upload Image</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#uploadButton").on("click", function () {
+        var fileInput = $("#fileInput")[0]; 
+        var file = fileInput.files[0];
+
+        if (file) {
+          uploadImage(file);
+        } else {
+          alert("Please select an image.");
+        }
+      });
+      function uploadImage(file) {
+        var serverEndpoint = 'api.php';
+        var formData = new FormData();
+        formData.append('image', file);
+        $.ajax({
+          url: serverEndpoint,
+          method: 'POST',
+          data: formData,
+          contentType: false,
+          processData: false,
+          success: function (response) {
+            console.log('Image uploaded to server.', response);
+          },
+          error: function (error) {
+            console.error('Error uploading image to server.', error);
+          },
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "7915a08c-4a61-4668-9d0a-6c4a395cddb7",
+		"name": "Middleware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20974817",
+		"_collection_link": "https://interstellar-meteor-467096.postman.co/workspace/biz~22010c2e-bd08-49a1-96f5-7da529026377/collection/20974817-7915a08c-4a61-4668-9d0a-6c4a395cddb7?action=share&source=collection_link&creator=20974817"
+	},
+	"item": [
+		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "Generate New Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{url}}/generatetoken/IncaStudio"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/check"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sending Message",
+			"item": [
+				{
+					"name": "Fetch All Templates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/templateNames"
+					},
+					"response": []
+				},
+				{
+					"name": "Send Template Trigger",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"919964642973\",\r\n    \"name\": \"welcome\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/send-template"
+					},
+					"response": []
+				},
+				{
+					"name": "Test send message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"to\": \"919964642973\",\r\n    \"text\": {\r\n        \"body\": \"Postman!\"\r\n    }   \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/send-message"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Sent All Messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/all-messages"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Sent Message By Phone Number",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/message/919964642973"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Webhook",
+			"item": [
+				{
+					"name": "Fetch all messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/user-messages"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all messages By Number",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPd25lck5hbWUiOiJrYXJhbkJCIiwiaWF0IjoxNjkyMjU2OTk5fQ.l_e0ynSm3kziO9q4xFLpdehdK9E81M6na8bb0YXt3Dw",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/user-messages/919964642973"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

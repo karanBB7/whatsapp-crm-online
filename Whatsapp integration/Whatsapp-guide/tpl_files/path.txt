@@ -1,0 +1,11 @@
+paste below files in the path = your_module\layouts\v7\modules\Vtiger
+
+AddCommentFormwhatsapp.tpl
+CommentsListwhatsapp.tpl
+Commentwhatsapp.tpl
+ShowAllCommentswhatsapp.tpl
+
+
+paste  ListViewActions.tpl
+
+layouts\v7\modules\Vtiger \ ListViewActions.tpl

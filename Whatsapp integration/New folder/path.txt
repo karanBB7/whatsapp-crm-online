@@ -1,0 +1,56 @@
+paste Utils.php
+
+\include\Webservices\Utils.php
+
+
+paste DetailView.php
+
+modules\Vtiger\models  \ DetailView.php
+
+
+paste CRMEntity.php
+
+\data \  CRMEntity.php
+
+
+paste WebserviceField.php
+include\Webservices \ WebserviceField.php
+
+
+paste Project.php
+
+modules\Project \ Project.php
+
+
+paste ProjectTask.php
+
+modules\ProjectTask \ ProjectTask.php
+
+paste: ListView.php
+\modules\Vtiger\models \ ListView.php
+
+
+paste Module.php 
+
+modules\Vtiger\models \ Module.php
+
+
+paste Record.php
+
+modules\Vtiger\models \ Record.php
+
+
+paste Relation.php
+
+modules\Vtiger\models \ Relation.php
+
+paste MassActionAjax.php
+
+modules\Vtiger\views \ MassActionAjax.php
+
+paste Users.js 
+
+modules\Users \ Users.js 
+
+
+

@@ -1,0 +1,325 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_ctwhatsappbusiness</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness` (
+  `ctwhatsappid` int(19) NOT NULL,
+  `whatsapp_no` varchar(100) DEFAULT NULL,
+  `whatsapp_sendername` varchar(100) DEFAULT NULL,
+  `whatsapp_chatid` varchar(100) DEFAULT NULL,
+  `message_type` varchar(100) DEFAULT NULL,
+  `message_body` blob,
+  `whatsapp_contactid` varchar(100) DEFAULT NULL,
+  `whatsapp_unreadread` varchar(255) DEFAULT NULL,
+  `whatsapp_withccode` varchar(255) DEFAULT NULL,
+  `whatsapp_withoccode` varchar(255) DEFAULT NULL,
+  `msgid` varchar(255) DEFAULT NULL,
+  `whatsapp_datetime` datetime DEFAULT NULL,
+  `whatsapp_important` varchar(255) DEFAULT NULL,
+  `your_number` varchar(255) DEFAULT NULL,
+  `whatsapp_request` text,
+  `whatsapp_response` text,
+  `whatsapp_quotemessage` text,
+  `whatsapp_botid` varchar(255) DEFAULT NULL,
+  `whatsapp_displayname` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinesscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinesscf` (
+  `ctwhatsappid` int(19) NOT NULL,
+  `tags` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`ctwhatsappid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwharsappallow_whatsappmodule</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwharsappallow_whatsappmodule` (
+  `module` varchar(50) DEFAULT NULL,
+  `phone_field` varchar(50) DEFAULT NULL,
+  `active` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinessconfiguration</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinessconfiguration` (
+  `api_url` varchar(100) DEFAULT NULL,
+  `auth_token` varchar(100) DEFAULT NULL,
+  `customfield1` varchar(100) DEFAULT NULL,
+  `customfield2` varchar(100) DEFAULT NULL,
+  `whatsappno` varchar(100) DEFAULT NULL,
+  `users_groups` text,
+  `iconactive` varchar(11) DEFAULT NULL,
+  `showunknownmsg` varchar(11) DEFAULT NULL,
+  `theme_view` varchar(50) DEFAULT NULL,
+  `whatsappstatus` varchar(50) DEFAULT NULL,
+  `customfield3` varchar(50) DEFAULT NULL,
+  `customfield4` varchar(50) DEFAULT NULL,
+  `customfield5` varchar(50) DEFAULT NULL,
+  `inapp_notification` varchar(50) DEFAULT NULL,
+  `customfield6` varchar(50) DEFAULT NULL,
+  `customfield7` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `whatsapplog` varchar(11) CHARACTER SET utf8 DEFAULT NULL,
+  `notificationtone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `notification` int(11) DEFAULT NULL,
+  `botidealtime` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_license_setting</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_license_setting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `license_key` varchar(255) DEFAULT NULL,
+  `status` tinyint(3) DEFAULT NULL,
+  `domain` varchar(255) DEFAULT NULL,
+  `expirydate` varchar(255) DEFAULT NULL,
+  `licensefield1` varchar(255) DEFAULT NULL,
+  `licensefield2` varchar(255) DEFAULT NULL,
+  `licensefield3` varchar(255) DEFAULT NULL,
+  `licensefield4` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinessmassbatch</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinessmassbatch` (
+  `batch` varchar(50) DEFAULT NULL,
+  `timeinterval` varchar(50) DEFAULT NULL,
+  `crondatetime` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinessschedulesendmsg</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinessschedulesendmsg` (
+  `schedulesendmsgid` int(11) DEFAULT NULL,
+  `recordid` int(11) DEFAULT NULL,
+  `body` blob,
+  `status` int(3) DEFAULT NULL,
+  `send_msg` int(3) DEFAULT NULL,
+  `datesendmessage` varchar(55) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinessmassmessage</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinessmassmessage` (
+  `massmessageid` int(11) NOT NULL,
+  `templatesid` int(11) DEFAULT NULL,
+  `whatsappmessage` blob NOT NULL,
+  `sendmessagedate` datetime NOT NULL,
+  `massmsgdatetime` varchar(55) NOT NULL,
+  `connectuserid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusinessusers</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusinessusers` (
+  `api_url` varchar(100) DEFAULT NULL,
+  `auth_token` varchar(100) DEFAULT NULL,
+  `customfield1` varchar(100) DEFAULT NULL,
+  `customfield2` varchar(100) DEFAULT NULL,
+  `whatsappno` varchar(100) DEFAULT NULL,
+  `users_groups` varchar(100) DEFAULT NULL,
+  `iconactive` varchar(11) DEFAULT NULL,
+  `showunknownmsg` varchar(11) DEFAULT NULL,
+  `theme_view` varchar(50) DEFAULT NULL,
+  `whatsappstatus` varchar(50) DEFAULT NULL,
+  `customfield3` varchar(50) DEFAULT NULL,
+  `customfield4` varchar(50) DEFAULT NULL,
+  `customfield5` varchar(50) DEFAULT NULL,
+  `customfield6` varchar(50) DEFAULT NULL,
+  `inapp_notification` varchar(50) DEFAULT NULL,
+  `customfield7` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_allcontacts</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_allcontacts` (
+  `scannedwhatsappnumber` varchar(55) NOT NULL,
+  `customerwhatsappnumber` varchar(55) NOT NULL,
+  `lastmessageid` varchar(255) NOT NULL,
+  `syncstatus` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_contacts_history</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_contacts_history` (
+  `whatsappnumber` varchar(55) NOT NULL,
+  `startdate` date NOT NULL,
+  `enddate` date NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_history</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_history` (
+  `scanwpnumber` varchar(55) DEFAULT NULL,
+  `mobile_no` varchar(55) DEFAULT NULL,
+  `history_id` text,
+  `history_fromme` varchar(15) DEFAULT NULL,
+  `remotjid` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_user_groups</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_user_groups` (
+  `userid` int(11) DEFAULT NULL,
+  `multiple_userid` text,
+  `active` int(11) DEFAULT NULL,
+  `whatsappbot` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_condition_assign</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_condition_assign` (
+  `que_id` int(11) NOT NULL,
+  `status` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `next_que_id1` int(30) NOT NULL,
+  `next_que_id2` int(30) NOT NULL,
+  `variablename` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `conditions` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `variablevalue` varchar(50) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_crmaction_master</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_crmaction_master` (
+  `crmaction_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tabid` bigint(11) NOT NULL,
+  `action` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `que_id` int(11) NOT NULL,
+  `related_tabid` int(11) NOT NULL,
+  PRIMARY KEY (`crmaction_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1574 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_crmaction_fieldmapping</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_crmaction_fieldmapping` (
+  `mappingid` int(11) NOT NULL AUTO_INCREMENT,
+  `crmaction_id` int(11) NOT NULL,
+  `vtigerfield` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `flowbuilderfield` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `maptype` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT 'request',
+  `defaultvalue` varchar(50) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`mappingid`),
+  KEY `crmaction_id` (`crmaction_id`),
+  CONSTRAINT `ctwhatsappbot_crmaction_fieldmapping_ibfk_1` FOREIGN KEY (`crmaction_id`) REFERENCES `ctwhatsappbot_crmaction_master` (`crmaction_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4552 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_opt_master</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_opt_master` (
+  `opt_id` int(11) NOT NULL AUTO_INCREMENT,
+  `opt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `opt_seq` int(11) DEFAULT NULL,
+  `botid` int(11) DEFAULT NULL,
+  `seq_option` int(11) DEFAULT NULL,
+  PRIMARY KEY (`opt_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8140 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_que_master</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_que_master` (
+  `que_id` int(11) NOT NULL AUTO_INCREMENT,
+  `messagetype` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `que_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `que_type_id` int(11) DEFAULT NULL,
+  `search_module` varchar(55) CHARACTER SET utf8 NOT NULL,
+  `search_column` varchar(55) CHARACTER SET utf8 NOT NULL,
+  `botid` int(11) DEFAULT NULL,
+  `que_sequence` int(11) DEFAULT NULL,
+  `type` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `next_sequence` int(11) DEFAULT NULL,
+  `varmessagetype` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `copy_from` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `copy_to` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `responseimg` text CHARACTER SET utf8,
+  PRIMARY KEY (`que_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13518 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsappbot_que_opt_assign</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsappbot_que_opt_assign` (
+  `que_id` int(11) DEFAULT NULL,
+  `opt_id` int(11) DEFAULT NULL,
+  `next_que_id` int(11) DEFAULT NULL,
+  `botid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsapp_bots</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsapp_bots` (
+  `botid` int(11) NOT NULL AUTO_INCREMENT,
+  `botjson` longtext CHARACTER SET utf8,
+  `botname` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `deleted` int(11) DEFAULT '0',
+  `scanwhatsapp_number` varchar(55) CHARACTER SET utf8 DEFAULT NULL,
+  `remove` int(11) DEFAULT '0',
+  `assignuserid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`botid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1109 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>ctwhatsapp_bot_configuration</name>
+			<sql><![CDATA[CREATE TABLE `ctwhatsapp_bot_configuration` (
+  `whatsappno` varchar(55) CHARACTER SET utf8 DEFAULT NULL,
+  `authtoken` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `whatsappbotstatus` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>flowbuilderfields</name>
+			<sql><![CDATA[CREATE TABLE `flowbuilderfields` (
+  `fieldId` int(11) NOT NULL AUTO_INCREMENT,
+  `fieldname` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `question` text CHARACTER SET utf8 NOT NULL,
+  `iconclass` varchar(122) CHARACTER SET utf8 NOT NULL,
+  `slug` varchar(122) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`fieldId`)
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_whatsappbot_responcevalue</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_whatsappbot_responcevalue` (
+  `mobilewhatsappnumber` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `variablevalue` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `variablename` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `bot_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>whatsappbot_pre_que</name>
+			<sql><![CDATA[CREATE TABLE `whatsappbot_pre_que` (
+  `preque` int(11) DEFAULT NULL,
+  `prebotid` int(11) DEFAULT NULL,
+  `prequemobilenumber` varchar(55) CHARACTER SET utf8 DEFAULT NULL,
+  `manualtransfer` int(3) DEFAULT NULL,
+  `manualdatetime` datetime DEFAULT NULL,
+  `idealdatetime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_whatsapp_botbutton</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_whatsapp_botbutton` (
+  `hearder_text` varchar(255) DEFAULT NULL,
+  `hearder_description` text,
+  `header_color` varchar(55) DEFAULT NULL,
+  `header_image` varchar(100) DEFAULT NULL,
+  `button_text` varchar(55) DEFAULT NULL,
+  `button_color` varchar(55) DEFAULT NULL,
+  `bg_image` varchar(100) DEFAULT NULL,
+  `scanned_number` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_ctwhatsappbusiness_botlicense</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_ctwhatsappbusiness_botlicense` (
+  `licensekey` varchar(255) DEFAULT NULL,
+  `expirydate` varchar(255) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `sendmessagelimit` varchar(55) DEFAULT NULL,
+  `domain` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+	</tables>
+</schema>

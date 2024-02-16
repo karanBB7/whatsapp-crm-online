@@ -1,0 +1,13 @@
+Utils.php paste in
+
+include\Webservices \ Utils.php
+
+
+CRMEntity.php replace in 
+
+data\ CRMEntity.php
+
+
+replace DetailView.php
+
+modules\Vtiger\models \ DetailView.php

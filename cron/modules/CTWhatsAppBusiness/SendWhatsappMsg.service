@@ -1,0 +1,463 @@
+<?php
+/*+***********************************************************************************
+ * The contents of this file are subject to the vtiger CRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  vtiger CRM Open Source
+ * The Initial Developer of the Original Code is vtiger.
+ * Portions created by vtiger are Copyright (C) vtiger.
+ * All Rights Reserved.
+ *************************************************************************************/
+
+require_once 'config.inc.php';
+require_once('include/utils/utils.php');
+require_once('include/database/PearDatabase.php');
+include_once 'includes/main/WebUI.php';
+
+global $current_user, $adb, $root_directory, $site_URL;
+$current_user = Users::getActiveAdminUser();
+$currentDateTime = date("Y-m-d H:i:s");
+$currentusername = $current_user->first_name.' '.$current_user->last_name;
+
+$currenUserID = $current_user->id;
+
+$currentdate = date('Y-m-d');
+$getexpiredate = $adb->pquery("SELECT * FROM vtiger_ctwhatsappbusiness_license_setting");
+$expirydate = $adb->query_result($getexpiredate, 0, 'expirydate');
+$date = Settings_CTWhatsAppBusiness_ConfigurationDetail_View::encrypt_decrypt($expirydate, $action='d');
+
+$configurationData = Settings_CTWhatsAppBusiness_Record_Model::getUserConfigurationDataWithId();
+$botidealtime = $configurationData['botidealtime'];
+$whatsapplog = $configurationData['whatsapplog'];
+
+$whatsappBotQuery = $adb->pquery("SELECT * FROM whatsappbot_pre_que");
+$botRows = $adb->num_rows($whatsappBotQuery);
+for ($i=0; $i < $botRows; $i++) { 
+	$idealdatetime = $adb->query_result($whatsappBotQuery, $i, 'idealdatetime');
+	$prequemobilenumber = $adb->query_result($whatsappBotQuery, $i, 'prequemobilenumber');
+
+	$messageTimeDiffrence = strtotime($currentDateTime) - strtotime($idealdatetime);
+	$minutes = floor(($messageTimeDiffrence / 60) % 60); 
+	
+	if($minutes >= $botidealtime){
+		$adb->pquery("DELETE FROM whatsappbot_pre_que WHERE prequemobilenumber = ?", array($prequemobilenumber));
+	}
+}
+
+$getMassBatchConfiguration = Settings_CTWhatsAppBusiness_ConfigurationDetail_View::getMassBatchConfigurationData();
+if($getMassBatchConfiguration){
+
+	$getLicenseDetail = CTWhatsAppBusiness_Record_Model::getWhatsAppLicenseDetail();
+	$licenseKey = $getLicenseDetail['licenseKey'];
+	$getWhatsappAccount = CTWhatsAppBusiness_Record_Model::getWhatsappAccountDetail($licenseKey);
+	$oneDayMessages = CTWhatsAppBusiness_Record_Model::getOneDaysMessages();
+									
+	$batch = $getMassBatchConfiguration['batch'];
+	$timeInterval = $getMassBatchConfiguration['timeInterval'];
+	$cronDateTime = $currentDateTime;
+
+	$massMessageQuery = $adb->pquery("SELECT * FROM vtiger_ctwhatsappbusinessmassmessage INNER JOIN vtiger_ctwhatsappbusinessschedulesendmsg ON vtiger_ctwhatsappbusinessschedulesendmsg.schedulesendmsgid = vtiger_ctwhatsappbusinessmassmessage.massmessageid WHERE vtiger_ctwhatsappbusinessschedulesendmsg.status = 0 GROUP BY vtiger_ctwhatsappbusinessmassmessage.massmessageid");
+
+	$massMessageRows = $adb->num_rows($massMessageQuery);
+
+	for ($m=0; $m < $massMessageRows; $m++) {
+		$massMessageId = $adb->query_result($massMessageQuery, $m, 'massmessageid');
+		$massMsgDateTime = $adb->query_result($massMessageQuery, $m, 'massmsgdatetime');
+		$templatesid = $adb->query_result($massMessageQuery, $m, 'templatesid');
+		$connectuserid = $adb->query_result($massMessageQuery, $m, 'connectuserid');
+
+		$configurationData = Settings_CTWhatsAppBusiness_Record_Model::getUserConfigurationAllDataWithId($connectuserid);
+		$apiUrl = $configurationData['api_url'];
+		$authToken = $configurationData['authtoken'];
+		$customfield1 = $configurationData['customfield1'];
+		$whatsappScanNo = $configurationData['whatsappno'];
+		$whatsappstatus = $configurationData['whatsappstatus'];
+		$configureUserid = $configurationData['configureUserid'];
+		$whatsappBusinessNo = $configurationData['whatsapp_businessnumber'];
+
+		if($massMsgDateTime == ''){
+			$msgSentCronDateTime = $cronDateTime;
+		}else{
+			$msgSentCronDateTime = $massMsgDateTime;
+		}
+
+		if($whatsappstatus == 1 || $whatsappstatus == 2){
+			if(strtotime($currentDateTime) >= strtotime($msgSentCronDateTime)){	
+				$getMassRecordQuery = $adb->pquery("SELECT * FROM vtiger_ctwhatsappbusinessschedulesendmsg WHERE status = 0 AND schedulesendmsgid = $massMessageId LIMIT 0,$batch");
+				
+				$massRecordCount = $adb->num_rows($getMassRecordQuery);
+				for ($i=0; $i < $massRecordCount; $i++) {
+					$wptemplateImage = '';
+					$recordId = $adb->query_result($getMassRecordQuery, $i, 'recordid');
+					$status = $adb->query_result($getMassRecordQuery, $i, 'status');
+					$body = $adb->query_result($getMassRecordQuery, $i, 'body');
+					$schedulesendmsgid = $adb->query_result($getMassRecordQuery, $i, 'schedulesendmsgid');
+
+					if($templatesid != 0){
+						$getWhatsappTemplateQuery = $adb->pquery("SELECT * FROM vtiger_ctwhatsapptemplates 
+						INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid 
+						WHERE vtiger_crmentity.deleted = 0 AND vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid = ?", array($templatesid));
+						$isTemplates = $adb->num_rows($getWhatsappTemplateQuery);
+						if($isTemplates){
+							$templatesID = $adb->query_result($getWhatsappTemplateQuery, 0, 'ctwhatsapptemplatesid');
+							$templateMsg = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_msg');
+							$wptemplateTitle = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_title');
+							$wptemplateImage = $adb->query_result($getWhatsappTemplateQuery, 0, 'storedname');
+						}
+					}
+
+					$setTypeQuery = $adb->pquery("SELECT * FROM vtiger_crmentity WHERE crmid = ?", array($recordId));
+					$sourceModule = $adb->query_result($setTypeQuery, 0, 'setype');
+					$deleted = $adb->query_result($setTypeQuery, 0, 'deleted');
+					$whatsappModuleFieldsData = CTWhatsAppBusiness_Record_Model::getWhatsappAllowModuleFields($sourceModule);
+					$phoneField = $whatsappModuleFieldsData['phoneField'];
+				
+					if($deleted == 1){
+						$adb->pquery("UPDATE vtiger_ctwhatsappbusinessschedulesendmsg SET status = 1, send_msg = 1 WHERE recordid = ?", array($recordId));
+					}else{
+						$recordModelModel = Vtiger_Record_Model::getInstanceById($recordId, $sourceModule);
+						$mobileno = preg_replace('/[^A-Za-z0-9]/', '', $recordModelModel->get($phoneField));
+						$bodydata = str_replace('\r\n',' ',html_entity_decode($body));
+						$msgbody = getMergedDescription($bodydata,$recordId,$sourceModule);
+
+						//displayname changes
+						if($recordId){
+				            $setype = VtigerCRMObject::getSEType($recordId);
+				            $recordModel = Vtiger_Record_Model::getInstanceById($recordId, $setype);
+				            $displayname = $recordModel->get('label');
+				        }else{
+				        	$displayname = $mobileno;
+				        }
+				        //displayname changes
+						
+						$sendsmsnumber = CTWhatsAppBusiness_Module_Model::getMobileNumber($mobileno, $customfield1);
+						if($sendsmsnumber){
+							$getnumberImportant = CTWhatsAppBusiness_Record_Model::getWhatsappNumberImportant($sendsmsnumber);
+
+							$checkNumberWhatsAppQuery = CTWhatsAppBusiness_Record_Model::getWhatsAppLogData($sendsmsnumber, $recordId, $whatsappScanNo);
+							$checkNumberWhatsAppRows = $checkNumberWhatsAppQuery['rows'];
+					        /*if($checkNumberWhatsAppRows == 0){
+					            $sendmessageUrl = $apiUrl.$whatsappBusinessNo.'/messages';
+					            $language = array("code" => "en_US");
+					            $postfieldsData = array('messaging_product' => "whatsapp",
+					                                'to' => $mobileno,
+					                                'type' => "template",
+					                                'template' => array('name' => "hello_world", 
+					                                                    'language' => $language),
+					                                );
+					            CTWhatsAppBusiness_WhatsappChat_View::callCURL($sendmessageUrl, $postfieldsData, $authtoken);
+					        }*/
+
+							if($isTemplates){
+								$getWhatsappTemplateQuery = $adb->pquery("SELECT * FROM vtiger_ctwhatsapptemplates 
+					                INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid 
+					                INNER JOIN vtiger_seattachmentsrel ON vtiger_seattachmentsrel.crmid = vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid 
+					                INNER JOIN vtiger_attachments ON vtiger_attachments.attachmentsid = vtiger_seattachmentsrel.attachmentsid
+					                WHERE vtiger_crmentity.deleted = 0 AND vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid = ?", array($templatesid));
+					            $isTemplatess = $adb->num_rows($getWhatsappTemplateQuery);
+
+					            if($isTemplatess){
+					                $wptemplateText = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_text');
+					                $imageId = $adb->query_result($getWhatsappTemplateQuery, 0, 'attachmentsid');
+					                $wptemplate_status = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_status');
+					                $imagePath = $adb->query_result($getWhatsappTemplateQuery, 0, 'path');
+					                $imageName = $adb->query_result($getWhatsappTemplateQuery, 0, 'storedname');
+					                $wptemplate_title = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_title');
+					                $filetype = $adb->query_result($getWhatsappTemplateQuery, 0, 'type');
+					                $wptemplate_language = $adb->query_result($getWhatsappTemplateQuery, 0, 'wptemplate_language');
+					                $attachmentPath = $site_URL.$imagePath.$imageId.'_'.$imageName;
+
+					                $msgTemplatebody = getMergedDescription($wptemplateText,$recordId,$sourceModule);
+					                
+				                    if($filetype == 'image/jpeg' || $filetype == 'image/jpg' || $filetype == 'image/png'){
+				                        $sendMessagetype = "image";
+				                    }else{
+				                        $sendMessagetype = "document";
+				                    }
+				                    $url = $apiUrl.$whatsappBusinessNo.'/messages';
+
+				                    if($wptemplate_status == 1){
+				                        $postfields = [
+				                           "messaging_product" => "whatsapp", 
+				                           "recipient_type" => "individual", 
+				                           "to" => $mobileno, 
+				                           "type" => "template", 
+				                           "template" => [
+				                                 "name" => $wptemplate_title, 
+				                                 "language" => [
+				                                    "code" => $wptemplate_language
+				                                 ], 
+				                                 "components" => [
+				                                       [
+				                                          "type" => "header", 
+				                                          "parameters" => [
+				                                             [
+				                                                "type" => "image", 
+				                                                "image" => [
+				                                                   "link" => $attachmentPath
+				                                                ] 
+				                                             ] 
+				                                          ] 
+				                                       ] 
+				                                    ] 
+				                              ] 
+				                        ];
+				                    }else{
+				                    	$postfields = array('messaging_product' => "whatsapp",
+				                                        'recipient_type' => "individual",
+				                                        'to' => $mobileno,
+				                                        'type' => $sendMessagetype,
+				                                            $sendMessagetype => array('link' => $attachmentPath ,'caption' => htmlspecialchars_decode($msgTemplatebody, ENT_QUOTES)),
+				                                        );
+				                    }
+					            }else{
+					                $getWhatsappTemplateData = $adb->pquery("SELECT * FROM vtiger_ctwhatsapptemplates 
+					                    INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid 
+					                    WHERE vtiger_crmentity.deleted = 0 AND vtiger_ctwhatsapptemplates.ctwhatsapptemplatesid = ?", array($templatesid));
+					                $templatesRows = $adb->num_rows($getWhatsappTemplateData);
+					                $wptemplateText = $adb->query_result($getWhatsappTemplateData, 0, 'wptemplate_text');
+					                $wptemplate_status = $adb->query_result($getWhatsappTemplateData, 0, 'wptemplate_status');
+					                $wptemplate_title = $adb->query_result($getWhatsappTemplateData, 0, 'wptemplate_title');
+					                $wptemplate_language = $adb->query_result($getWhatsappTemplateData, 0, 'wptemplate_language');
+					                $url = $apiUrl.$whatsappBusinessNo.'/messages';
+
+					                $msgTemplatebody = getMergedDescription($wptemplateText,$recordId,$sourceModule);
+					                if($wptemplate_status == 1){
+					                    $language = array("code" => $wptemplate_language);
+					                    $postfields = array('messaging_product' => "whatsapp",
+					                                        'to' => $mobileno,
+					                                        'type' => "template",
+					                                        'template' => array('name' => $wptemplate_title, 
+					                                                            'language' => $language),
+					                                        );
+					                }else{
+					                    $postfields = array('messaging_product' => "whatsapp",
+					                                        'recipient_type' => "individual",
+					                                        'to' => $mobileno,
+					                                        'type' => "text",
+					                                        'text' => array('preview_url' => false, 
+					                                                    'body' => htmlspecialchars_decode($msgTemplatebody, ENT_QUOTES)),
+					                                        );
+					                }
+					            }
+				                /*$url = $apiUrl.$whatsappBusinessNo.'/messages';
+				                $language = array("code" => "en_US");
+				                $postfields = array('messaging_product' => "whatsapp",
+				                                    'to' => $sendsmsnumber,
+				                                    'type' => "template",
+				                                    'template' => array('name' => $wptemplateTitle, 
+				                                                        'language' => $language),
+				                                    );*/
+
+
+								if(strtotime($date) > strtotime($currentDateTime)){
+									$whatsappLogQuery = CTWhatsAppBusiness_Record_Model::getWhatsAppLogData($sendsmsnumber, $recordId, $whatsappScanNo);
+									$whatsapplogRows = $whatsappLogQuery['rows'];
+									if($whatsapplogRows == 0){
+										$recordModel = Vtiger_Record_Model::getCleanInstance('WhatsAppLog');
+										$recordModel->set('whatsapplog_sendername', $currentusername);
+										$recordModel->set('messagelog_type', 'Mass Message');
+										$recordModel->set('messagelog_body', $msgTemplatebody);
+										$recordModel->set('whatsapplog_displayname', $displayname);
+										$recordModel->set('whatsapplog_contactid', $recordId);
+										$recordModel->set('whatsapplog_unreadread', 'Unread');
+										$recordModel->set('whatsapplog_withccode', $sendsmsnumber);
+										$recordModel->set('whatsapplog_withoccode', $schedulesendmsgid);
+										$recordModel->set('whatsapplog_your_number', $whatsappScanNo);
+										$recordModel->set('assigned_user_id', $connectuserid);
+										$recordModel->set('whatsapplog_important', $getnumberImportant);
+										$recordModel->set('whatsapplog_datetime', $adb->formatDate($currentDateTime, true));
+
+										if($getWhatsappAccount->type == 'free' && $oneDayMessages < '100'){
+											$recordModel->save();
+											$insertRecord = $recordModel->getId();
+										}else if($getWhatsappAccount->type == 'premium'){
+											$recordModel->save();
+											$insertRecord = $recordModel->getId();
+										}
+
+										$whatsAppLogId = $recordModel->getId();
+									}else{
+						                $whatsapplogid = $whatsappLogQuery['whatsapplogid'];
+						                $recordModel = Vtiger_Record_Model::getInstanceById($whatsapplogid, 'WhatsAppLog');
+						                $recordModel->set('mode', 'edit');
+						                $recordModel->set('id', $whatsapplogid);
+						                $recordModel->set('whatsapplog_datetime', $adb->formatDate($currentDateTime, true));
+						            	$recordModel->set('messagelog_body', $msgTemplatebody);
+						            	$recordModel->set('assigned_user_id', $connectuserid);
+						                $recordModel->save();
+
+						                $whatsAppLogId = $recordModel->getId();
+						            }
+
+
+									$recordModel = Vtiger_Record_Model::getCleanInstance('CTWhatsAppBusiness');
+									$recordModel->set('whatsapp_sendername', $currentusername);
+									$recordModel->set('message_type', 'Mass Message');
+									$recordModel->set('message_body', $msgTemplatebody);
+									$recordModel->set('whatsapp_displayname', $displayname);
+									$recordModel->set('whatsapp_contactid', $recordId);
+									$recordModel->set('whatsapp_unreadread', 'Unread');
+									$recordModel->set('whatsapp_withccode', $sendsmsnumber);
+									$recordModel->set('whatsapp_withoccode', $schedulesendmsgid);
+									$recordModel->set('whatsapp_fromno', $whatsappScanNo);
+									$recordModel->set('your_number', $whatsappScanNo);
+									$recordModel->set('assigned_user_id', $connectuserid);
+									$recordModel->set('whatsapp_important', $getnumberImportant);
+									$recordModel->set('whatsapp_datetime', $adb->formatDate($currentDateTime, true));
+									$requestParam = $url.' ';
+									$requestParam .= json_encode($postfields);
+									if($whatsapplog == 1){
+										$recordModel->set('whatsapp_request', $requestParam);
+									}
+									
+									if($getWhatsappAccount->type == 'free' && $oneDayMessages < '100'){
+										$recordModel->save();
+										$insertRecord = $recordModel->getId();
+									}else if($getWhatsappAccount->type == 'premium'){
+										$recordModel->save();
+										$insertRecord = $recordModel->getId();
+									}
+
+									$val = CTWhatsAppBusiness_WhatsappChat_View::callCURL($url, $postfields, $authToken);
+									$whatsappMessageid = $val['messages'][0]['id'];
+
+									$updateWhatsAppLogMessageId = CTWhatsAppBusiness_Record_Model::updateWhatsAppMessageId('WhatsAppLog', $whatsAppLogId, $val, $whatsapplog, $tonumbersValue, $whatsappModule);
+
+									$updateWhatsAppMessageId = CTWhatsAppBusiness_Record_Model::updateWhatsAppMessageId('CTWhatsAppBusiness', $insertRecord, $val, $whatsapplog, $sendsmsnumber, $whatsappModule);
+								}
+							
+							}else{
+								$url = $apiUrl.$whatsappBusinessNo.'/messages';
+					            $postfields = array('messaging_product' => "whatsapp",
+					                                'recipient_type' => "individual",
+					                                'to' => $sendsmsnumber,
+					                                'type' => "text",
+					                                'text' => array('preview_url' => false, 
+					                                                'body' => $msgbody),
+					                                );
+								
+								if(strtotime($date) > strtotime($currentDateTime)){
+									$whatsappLogQuery = CTWhatsAppBusiness_Record_Model::getWhatsAppLogData($sendsmsnumber, $recordId, $whatsappScanNo);
+									$whatsapplogRows = $whatsappLogQuery['rows'];
+									if($whatsapplogRows == 0){
+										$recordModel = Vtiger_Record_Model::getCleanInstance('WhatsAppLog');
+										$recordModel->set('whatsapplog_sendername', $currentusername);
+										$recordModel->set('whatsapplog_msgid', $val['key']['id']);
+										$recordModel->set('messagelog_type', 'Mass Message');
+										$recordModel->set('messagelog_body', $msgbody);
+										$recordModel->set('whatsapplog_displayname', $displayname);
+										$recordModel->set('whatsapplog_contactid', $recordId);
+										$recordModel->set('whatsapplog_unreadread', 'Unread');
+										$recordModel->set('whatsapplog_withccode', $sendsmsnumber);
+										$recordModel->set('whatsapplog_withoccode', $schedulesendmsgid);
+										$recordModel->set('whatsapplog_your_number', $whatsappScanNo);
+										$recordModel->set('assigned_user_id', $connectuserid);
+										$recordModel->set('whatsapplog_important', $getnumberImportant);
+										$recordModel->set('whatsapplog_datetime', $adb->formatDate($currentDateTime, true));
+										
+										if($getWhatsappAccount->type == 'free' && $oneDayMessages < '100'){
+											$recordModel->save();
+											$insertRecord = $recordModel->getId();
+										}else if($getWhatsappAccount->type == 'premium'){
+											$recordModel->save();
+											$insertRecord = $recordModel->getId();
+										}
+										$whatsAppLogId = $recordModel->getId();
+									}else{
+						                $whatsapplogid = $whatsappLogQuery['whatsapplogid'];
+						                $recordModel = Vtiger_Record_Model::getInstanceById($whatsapplogid, 'WhatsAppLog');
+						                $recordModel->set('mode', 'edit');
+						                $recordModel->set('id', $whatsapplogid);
+						                $recordModel->set('whatsapplog_datetime', $adb->formatDate($currentDateTime, true));
+						            	$recordModel->set('messagelog_body', $msgbody);
+						                $recordModel->set('assigned_user_id', $connectuserid);
+						                $recordModel->save();
+
+						                $whatsAppLogId = $recordModel->getId();
+						            }
+						            
+									$recordModel = Vtiger_Record_Model::getCleanInstance('CTWhatsAppBusiness');
+									$recordModel->set('whatsapp_sendername', $currentusername);
+									$recordModel->set('message_type', 'Mass Message');
+									$recordModel->set('message_body', $msgbody);
+									
+									$recordModel->set('whatsapp_displayname', $displayname);
+									$recordModel->set('whatsapp_contactid', $recordId);
+									$recordModel->set('whatsapp_unreadread', 'Unread');
+									$recordModel->set('whatsapp_withccode', $sendsmsnumber);
+									$recordModel->set('whatsapp_withoccode', $schedulesendmsgid);
+									$recordModel->set('whatsapp_fromno', $whatsappScanNo);
+									$recordModel->set('your_number', $whatsappScanNo);
+									$recordModel->set('assigned_user_id', $connectuserid);
+									$recordModel->set('whatsapp_important', $getnumberImportant);
+									$recordModel->set('whatsapp_datetime', $adb->formatDate($currentDateTime, true));
+									$requestParam = $url.' ';
+									$requestParam .= json_encode($postfields);
+									if($whatsapplog == 1){
+										$recordModel->set('whatsapp_request', $requestParam);
+									}
+									
+									if($getWhatsappAccount->type == 'free' && $oneDayMessages < '100'){
+										$recordModel->save();
+										$insertRecord = $recordModel->getId();
+									}else if($getWhatsappAccount->type == 'premium'){
+										$recordModel->save();
+										$insertRecord = $recordModel->getId();
+									}
+
+									$val = CTWhatsAppBusiness_WhatsappChat_View::callCURL($url, $postfields, $authToken);
+									$whatsappMessageid = $val['messages'][0]['id'];
+
+									$updateWhatsAppLogMessageId = CTWhatsAppBusiness_Record_Model::updateWhatsAppMessageId('WhatsAppLog', $whatsAppLogId, $val, $whatsapplog, $tonumbersValue, $whatsappModule);
+
+									$updateWhatsAppMessageId = CTWhatsAppBusiness_Record_Model::updateWhatsAppMessageId('CTWhatsAppBusiness', $insertRecord, $val, $whatsapplog, $sendsmsnumber, $whatsappModule);
+								}
+							}
+						}else{
+							$whatsappMessageid = '-';
+							$recordModel = Vtiger_Record_Model::getCleanInstance('CTWhatsAppBusiness');
+							$recordModel->set('whatsapp_sendername', $currentusername);
+							$recordModel->set('msgid', '-');
+							$recordModel->set('message_type', 'Mass Message');
+							$recordModel->set('message_body', $msgbody);
+							$recordModel->set('whatsapp_contactid', $recordId);
+							$recordModel->set('whatsapp_unreadread', 'Unread');
+							$recordModel->set('whatsapp_withccode', $sendsmsnumber);
+							$recordModel->set('whatsapp_withoccode', $schedulesendmsgid);
+							$recordModel->set('whatsapp_fromno', $whatsappScanNo);
+							$recordModel->set('your_number', $whatsappScanNo);
+							$recordModel->set('assigned_user_id', $connectuserid);
+							$recordModel->set('whatsapp_datetime', $adb->formatDate($currentDateTime, true));
+							$requestParam = $url.' ';
+							$requestParam .= json_encode($postfields);
+							if($whatsapplog == 1){
+								$recordModel->set('whatsapp_request', $requestParam);
+								$recordModel->set('whatsapp_response', 'Number is not available.');
+							}
+							
+							if($getWhatsappAccount->type == 'free' && $oneDayMessages < '100'){
+								$recordModel->save();
+								$insertRecord = $recordModel->getId();
+							}else if($getWhatsappAccount->type == 'premium'){
+								$recordModel->save();
+								$insertRecord = $recordModel->getId();
+							}
+						}
+						
+						
+						
+						if(strtotime($date) > strtotime($currentDateTime)){
+							if($whatsappMessageid){
+								$adb->pquery("UPDATE vtiger_ctwhatsappbusinessschedulesendmsg SET status = 1, send_msg = 1, datesendmessage = ? WHERE recordid = ? AND schedulesendmsgid = ?", array($currentDateTime, $recordId, $schedulesendmsgid));
+
+								$newCronDateTime = date('Y-m-d H:i:s',strtotime('+'.$timeInterval.' minute',strtotime($currentDateTime)));
+								$adb->pquery("UPDATE vtiger_ctwhatsappbusinessmassmessage SET massmsgdatetime = ? WHERE massmessageid = ?", array($newCronDateTime, $schedulesendmsgid));
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

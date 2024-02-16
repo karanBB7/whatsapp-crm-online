@@ -1,0 +1,15 @@
+paste Detail.js
+layouts\v7\modules\Vtiger\resources \   Detail.js
+
+
+paste Vtiger.js
+
+layouts\v7\modules\Vtiger\resources \ Vtiger.js 
+
+
+Rename V7 - Detail.js TO Detail.js and paste in the location  layouts\v7\modules\Vtiger\resources \ Detail.js
+
+
+Rename vlayout - Detail.js TO Detail.js and paste in the location  layouts\vlayout\modules\Vtiger\resources \ Detail.js
+
+

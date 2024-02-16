@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<module>
+<name>CTWhatsAppTemplates</name>
+<label>CTWhatsAppTemplates</label>
+<parent>Marketing</parent>
+<version>1.0</version>
+<dependencies>
+<vtiger_version>7.4</vtiger_version>
+</dependencies>
+<modulebundle>true</modulebundle>
+<modulelist>
+<dependent_module>
+<name>CTWhatsAppTemplates</name>
+<install_sequence>1</install_sequence>
+<filepath>CTWhatsAppTemplates.zip</filepath>
+</dependent_module>
+<dependent_module>
+<name>WhatsAppLog</name>
+<install_sequence>2</install_sequence>
+<filepath>WhatsAppLog.zip</filepath>
+</dependent_module>
+</modulelist>
+</module>

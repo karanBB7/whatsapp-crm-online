@@ -1,0 +1,132 @@
+1) vtiger_tab
+
+
+INSERT INTO `vtiger_tab` (`tabid`, `name`, `presence`, `tabsequence`, `tablabel`, `modifiedby`, `modifiedtime`, `customized`, `ownedby`, `isentitytype`, `trial`, `version`, `parent`, `source`, `issyncable`, `allowduplicates`, `sync_action_for_duplicates`) VALUES (59, 'Whatsapp', 0, -1, 'Whatsapp', NULL, NULL, 0, 0, 1, 0, '2.1', '', NULL, 1, 1, 1);
+
+
+2) vtiger_field
+
+
+INSERT INTO `vtiger_field` (`tabid`, `fieldid`, `columnname`, `tablename`, `generatedtype`, `uitype`, `fieldname`, `fieldlabel`, `readonly`, `presence`, `defaultvalue`, `maximumlength`, `sequence`, `block`, `displaytype`, `typeofdata`, `quickcreate`, `quickcreatesequence`, `info_type`, `masseditable`, `helpinfo`, `summaryfield`, `headerfield`, `isunique`) VALUES
+(59, 1234, 'commentcontent', 'vtiger_whatsapp', 1, '19', 'commentcontent', 'Comment', 1, 0, '', 100, 4, 98, 1, 'V~M', 0, 4, 'BAS', 2, '', 1, 0, 0),
+(59, 1235, 'related_to', 'vtiger_whatsapp', 1, '10', 'related_to', 'Related To', 1, 2, '', 100, 2, 99, 1, 'V~M', 2, 5, 'BAS', 2, '', 0, 0, 0),
+(59, 1236, 'parent_comments', 'vtiger_whatsapp', 1, '10', 'parent_comments', 'Related To Comments', 1, 2, '', 100, 7, 99, 1, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1237, 'customer', 'vtiger_whatsapp', 1, '10', 'customer', 'Customer', 1, 2, '', 100, 6, 98, 3, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1238, 'userid', 'vtiger_whatsapp', 1, '10', 'userid', 'UserId', 1, 2, '', 100, 7, 98, 3, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1239, 'reasontoedit', 'vtiger_whatsapp', 1, '19', 'reasontoedit', 'ReasonToEdit', 1, 2, '', 100, 8, 98, 1, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1240, 'is_private', 'vtiger_whatsapp', 1, '7', 'is_private', 'Is Private', 1, 2, '', 100, 9, 98, 1, 'I~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1241, 'related_email_id', 'vtiger_whatsapp', 1, '1', 'related_email_id', 'Related Email Id', 1, 2, '0', 100, 11, 98, 1, 'I~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1242, 'filename', 'vtiger_whatsapp', 1, '62', 'filename', 'Attachment', 1, 0, '', 100, 10, 98, 1, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1243, 'smownerid', 'vtiger_crmentity', 1, '53', 'assigned_user_id', 'Assigned To', 1, 0, '', 100, 1, 99, 1, 'V~M', 0, 1, 'BAS', 2, '', 1, 0, 0),
+(59, 1244, 'createdtime', 'vtiger_crmentity', 1, '70', 'createdtime', 'Created Time', 1, 0, '', 100, 5, 99, 2, 'DT~O', 0, 2, 'BAS', 0, '', 0, 0, 0),
+(59, 1245, 'modifiedtime', 'vtiger_crmentity', 1, '70', 'modifiedtime', 'Modified Time', 1, 0, '', 100, 6, 99, 2, 'DT~O', 0, 3, 'BAS', 0, '', 0, 0, 0),
+(59, 1246, 'smcreatorid', 'vtiger_crmentity', 1, '52', 'creator', 'Creator', 1, 2, '', 100, 4, 99, 2, 'V~O', 1, 0, 'BAS', 1, '', 0, 0, 0),
+(59, 1247, 'source', 'vtiger_crmentity', 1, '1', 'source', 'Source', 1, 2, '', 100, 5, 98, 2, 'V~O', 3, 6, 'BAS', 0, '', 0, 0, 0);
+
+
+3) vtiger_relatedlists
+
+
+INSERT INTO `vtiger_relatedlists` (`relation_id`, `tabid`, `related_tabid`, `name`, `sequence`, `label`, `presence`, `actions`, `relationfieldid`, `source`, `relationtype`) VALUES
+(178, 7, 59, 'get_comments', 10, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(179, 4, 59, 'get_comments', 17, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(180, 6, 59, 'get_comments', 19, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(181, 2, 59, 'get_comments', 11, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(182, 44, 59, 'get_comments', 3, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(183, 45, 59, 'get_comments', 7, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(184, 13, 59, 'get_comments', 9, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(185, 15, 59, 'get_comments', 3, 'Whatsapp', 0, '', 1182, NULL, '1:N'),
+(186, 50, 59, 'get_related_list', 1, 'Whatsapp', 0, 'ADD,SELECT', NULL, NULL, 'N:N');
+
+
+4) vtiger_blocks
+
+
+INSERT INTO `vtiger_blocks` (`blockid`, `tabid`, `blocklabel`, `sequence`, `show_title`, `visible`, `create_view`, `edit_view`, `detail_view`, `display_status`, `iscustom`) VALUES ('183', '59', 'LBL_WHATSAPP_INFORMATION', '1', '0', '0', '0', '0', '0', '1', '0');
+
+
+5) vtiger_ws_entity
+
+INSERT INTO `vtiger_ws_entity` (`id`, `name`, `handler_path`, `handler_class`, `ismodule`) VALUES (NULL, 'Whatsapp', 'include/Webservices/VtigerModuleOperation.php', 'VtigerModuleOperation', '1');
+
+
+6) vtiger_eventhandlers
+
+INSERT INTO `vtiger_eventhandlers` (`eventhandler_id`, `event_name`, `handler_path`, `handler_class`, `cond`, `is_active`, `dependent_on`) VALUES ('35', 'vtiger.entity.aftersavewhatsapp', 'modules/Whatsapp/WhatsappHandler.php', 'WhatsappHandler', '', '1', '[]');
+	
+7) vtiger_entityname
+
+INSERT INTO `vtiger_entityname` (`tabid`, `modulename`, `tablename`, `fieldname`, `entityidfield`, `entityidcolumn`) VALUES ('59', 'Whatsapp', 'vtiger_whatsapp', 'commentcontent', 'modcommentsid', 'modcommentsid');
+
+
+8) vtiger_customview
+
+INSERT INTO `vtiger_customview` (`cvid`, `viewname`, `setdefault`, `setmetrics`, `entitytype`, `status`, `userid`) VALUES ('59', 'All', '0', '0', 'Whatsapp', '0', '1');
+
+
+9) vtiger_cvcolumnlist
+
+INSERT INTO `vtiger_cvcolumnlist` (`cvid`, `columnindex`, `columnname`) VALUES ('59', '0', 'vtiger_whatsapp:commentcontent:commentcontent:Whatsapp_Comment:V'), ('59', '1', 'vtiger_whatsapp:related_to:Whatsapp_Related_To:V'), ('59', '2', 'vtiger_crmentity:modifiedtime:modifiedtime:Whatsapp_Modified_Time:DT'), ('59', '3', 'vtiger_crmentity:smownerid:assigned_user_id:Whatsapp_Assigned_To:V');
+
+
+
+10)	vtiger_links
+
+INSERT INTO `vtiger_links` (`linkid`, `tabid`, `linktype`, `linklabel`, `linkurl`, `linkicon`, `sequence`, `handler_path`, `handler_class`, `handler`, `parent_link`) VALUES
+(118, 7, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(119, 4, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(120, 6, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(121, 2, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(122, 42, 'HEADERSCRIPT', 'WhatsappCommonHeaderScript', 'modules/Whatsapp/WhatsappCommon.js', '', 0, NULL, NULL, NULL, NULL),
+(123, 44, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(124, 45, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(125, 13, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL),
+(126, 15, 'DETAILVIEWWIDGET', 'DetailViewBlockCommentWidget', 'block://Whatsapp:modules/Whatsapp/Whatsapp.php', '', 0, NULL, NULL, NULL, NULL);
+
+
+11) vtiger_ws_fieldtype
+
+INSERT INTO `vtiger_ws_fieldtype`(`fieldtypeid`, `uitype`, `fieldtype`) VALUES ('42','62','webhook');
+
+
+
+INSERT INTO `vtiger_fieldmodulerel` (`fieldid`, `module`, `relmodule`, `status`, `sequence`) VALUES
+(1235, 'Whatsapp', 'Leads', NULL, NULL),
+(1235, 'Whatsapp', 'Contacts', NULL, NULL),
+(1235, 'Whatsapp', 'Accounts', NULL, NULL),
+(1236, 'Whatsapp', 'Whatsapp', NULL, NULL),
+(1235, 'Whatsapp', 'Potentials', NULL, NULL),
+(1235, 'Whatsapp', 'ProjectTask', NULL, NULL),
+(1235, 'Whatsapp', 'Project', NULL, NULL),
+(1237, 'Whatsapp', 'Contacts', NULL, NULL),
+(1235, 'Whatsapp', 'HelpDesk', NULL, NULL),
+(1235, 'Whatsapp', 'Faq', NULL, NULL),
+(1235, 'Whatsapp', 'Invoice', NULL, NULL),
+(1235, 'Whatsapp', 'Quotes', NULL, NULL),
+(1235, 'Whatsapp', 'PurchaseOrder', NULL, NULL),
+(1235, 'Whatsapp', 'SalesOrder', NULL, NULL);
+
+
+
+
+
+
+
+
+
+
+-- INSERT INTO `vtiger_fieldmodulerel` (`fieldid`, `module`, `relmodule`, `status`, `sequence`) VALUES
+-- (854(related_to), 'Whatsapp', 'Leads', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Contacts', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Accounts', NULL, NULL),
+-- (855(parent_comments), 'Whatsapp', 'Whatsapp', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Potentials', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'ProjectTask', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Project', NULL, NULL),
+-- (856(customer), 'Whatsapp', 'Contacts', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'HelpDesk', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Faq', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Invoice', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'Quotes', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'PurchaseOrder', NULL, NULL),
+-- (854(related_to), 'Whatsapp', 'SalesOrder', NULL, NULL);

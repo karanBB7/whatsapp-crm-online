@@ -1,0 +1,6 @@
+Replace Field.php at     modules\Vtiger\models\  Field.php
+
+paste webhook.php at modules\Vtiger\uitypes\  webhook.php 
+
+
+paste webhook.tpl at layouts\v7\modules\Vtiger\uitypes\   webhook.tpl
